@@ -23,4 +23,7 @@
 
     <!-- FOD recognizing animation -->
     <dimen name="fod_animation_size">300.0px</dimen>
+    
+        <!-- Smart Charging -->
+    <bool name="config_supportSmartCharging">true</bool>
 </resources>
