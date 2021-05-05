@@ -115,18 +115,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
         }
     };
     
-        // Motor status
-    private static final int MOTOR_STATUS_POPUP_OK = 11;
-    private static final int MOTOR_STATUS_POPUP_JAMMED = 12;
-    private static final int MOTOR_STATUS_TAKEBACK_OK = 13;
-    private static final int MOTOR_STATUS_TAKEBACK_JAMMED = 14;
-    private static final int MOTOR_STATUS_PRESSED = 15;
-    private static final int MOTOR_STATUS_CALIB_OK = 17;
-    private static final int MOTOR_STATUS_CALIB_ERROR = 18;
-    private static final int MOTOR_STATUS_REQUEST_CALIB = 19;
+     
 
-    // Error dialog
-    private boolean mErrorDialogShowing;
 
     @Override
     public void onCreate() {
