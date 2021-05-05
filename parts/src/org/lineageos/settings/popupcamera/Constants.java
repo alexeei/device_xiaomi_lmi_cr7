@@ -24,9 +24,9 @@ public class Constants {
     public static final int MSG_CAMERA_OPEN = 1002;
 
     public static final int MOTOR_STATUS_POPUP = 11;
-    public static final int MOTOR_STATUS_POPUP_JAM = 12;
+    public static final int MOTOR_STATUS_POPUP_JAMMED = 12;
     public static final int MOTOR_STATUS_TAKEBACK = 13;
-    public static final int MOTOR_STATUS_TAKEBACK_JAM = 14;
+    public static final int MOTOR_STATUS_TAKEBACK_JAMMED = 14;
     public static final int MOTOR_STATUS_PRESSED = 15;
     public static final int MOTOR_STATUS_CALIB_OK = 17;
     public static final int MOTOR_STATUS_CALIB_ERROR = 18;

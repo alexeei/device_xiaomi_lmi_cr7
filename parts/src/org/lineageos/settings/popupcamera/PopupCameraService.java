@@ -142,8 +142,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
             mMotorStatusCallback = new MotorStatusCallback();
             mMotor.setMotorCallback(mMotorStatusCallback);
             int status = mMotor.getMotorStatus();
-            if (status == Constants.MOTOR_STATUS_POPUP || status == Constants.MOTOR_STATUS_POPUP_JAM
-                    || status == Constants.MOTOR_STATUS_TAKEBACK_JAM) {
+            if (status == Constants.MOTOR_STATUS_POPUP || status == Constants.MOTOR_STATUS_POPUP_JAMMED
+                    || status == Constants.MOTOR_STATUS_TAKEBACK_JAMMED) {
                 mHandler.sendEmptyMessage(Constants.MSG_CAMERA_CLOSED);
             }
         } catch (RemoteException e) {
@@ -155,7 +155,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
         try {
             int status = mMotor.getMotorStatus();
             if (status == Constants.MOTOR_STATUS_POPUP ||
-                    status == Constants.MOTOR_STATUS_TAKEBACK_JAM) {
+                    status == Constants.MOTOR_STATUS_TAKEBACK_JAMMED) {
                 if (DEBUG) Log.d(TAG, "Opened front camera detected, taking back");
                 mMotor.takebackMotor(1);
             }
