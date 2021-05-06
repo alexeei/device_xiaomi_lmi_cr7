@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
+    
+# FlickerFree
+PRODUCT_PACKAGES += \
+    FlickerFree
 
 # Init scripts
 PRODUCT_PACKAGES += \
