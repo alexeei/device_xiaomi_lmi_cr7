@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017 The LineageOS Project
+ * Copyright (C) 2019 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,19 +14,18 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.display;
+package org.lineageos.settings.flickerfree;
 
-import android.os.Bundle;
-import android.preference.PreferenceActivity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 
-public class DcDimmingSettingsActivity extends PreferenceActivity {
-
-    private static final String TAG_DCDIMMING = "dcdimming";
+public class Startup extends BroadcastReceiver {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new DcDimmingSettingsFragment(), TAG_DCDIMMING).commit();
+    public void onReceive(final Context context, final Intent intent) {
+            FlickerFreeSettingsActivity.restoreState(context);
+            Utils.restoreNodePrefs(context);
     }
+
 }
