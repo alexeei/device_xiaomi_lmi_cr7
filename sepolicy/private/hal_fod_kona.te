@@ -32,6 +32,7 @@ wakelock_use(hal_fod_kona)
 allow hal_fod_kona sysfs_graphics:file {read write getattr open};
 allow hal_fod_kona sysfs_graphics:dir {search};
 allow hal_fod_kona sysfs_graphics:lnk_file {read};
+allow hal_fod_kona sysfs_dm:file rw_file_perms;
 
 # Allow hal_fod_kona to read brightness node
 allow hal_fod_kona sysfs_graphics:dir{search};
