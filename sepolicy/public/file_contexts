@@ -14,3 +14,4 @@
 #Brightness Node
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight(/.*)?      u:object_r:vendor_sysfs_graphics:s0
 
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable  u:object_r:sysfs_graphics:s0
